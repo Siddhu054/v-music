@@ -1,0 +1,41 @@
+.recently-played {
+  padding: 20px;
+}
+
+.recent-tracks {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.track-item {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.track-item:hover {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.track-image {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.track-info h3 {
+  margin: 0;
+  font-size: 1rem;
+  color: white;
+}
+
+.track-info p {
+  margin: 5px 0 0;
+  font-size: 0.9rem;
+  color: #b3b3b3;
+}

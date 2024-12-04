@@ -1,0 +1,91 @@
+.sidebar {
+  width: 240px;
+  background-color: #000000;
+  padding: 20px;
+  position: relative;
+  box-shadow: 2px 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.sidebar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 1px;
+  height: 100%;
+  background: linear-gradient(to bottom, transparent, #ff0000, transparent);
+}
+
+.logo {
+  padding: 10px 0;
+  text-align: center;
+}
+
+.logo h1 {
+  color: #ff0000;
+  font-size: 2.5rem;
+  text-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  animation: glow 1.5s ease-in-out infinite alternate;
+}
+
+.sidebar-menu {
+  margin-top: 20px;
+}
+
+.menu-item {
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.menu-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 3px;
+  background-color: #ff0000;
+  transform: scaleY(0);
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover::before,
+.menu-item.active::before {
+  transform: scaleY(1);
+}
+
+.menu-item:hover {
+  color: #ff0000;
+  padding-left: 15px;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.1), transparent);
+}
+
+.menu-item.active {
+  color: #ff0000;
+  background: linear-gradient(90deg, rgba(255, 0, 0, 0.1), transparent);
+}
+
+.menu-item svg {
+  margin-right: 15px;
+  font-size: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.menu-item:hover svg {
+  transform: scale(1.2);
+}
+
+@keyframes glow {
+  from {
+    text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 15px #ff0000;
+  }
+  to {
+    text-shadow: 0 0 10px #ff0000, 0 0 20px #ff0000, 0 0 30px #ff0000;
+  }
+}
